@@ -21,27 +21,31 @@
 
 // Console.WriteLine(car2.Color);
 
-Console.WriteLine("Welcome to programming!");
-Console.WriteLine("Please tell me your name");
-string name = Console.ReadLine();
-Console.WriteLine($"Hello {name}, what do you want to do today?");
+// Console.WriteLine("Welcome to programming!");
+// Console.WriteLine("Please tell me your name");
+// string name = Console.ReadLine();
+// Console.WriteLine($"Hello {name}, what do you want to do today?");
 
-Console.WriteLine("[1] - Add two numebrs");
-Console.WriteLine("[2] - Exit");
+// Console.WriteLine("[1] - Add two numebrs");
+// Console.WriteLine("[2] - Exit");
 
-string userInput = Console.ReadLine();
+// string userInput = Console.ReadLine();
 
-if (userInput == "1")
-{
-    Console.WriteLine("Please give me two numbers");
-    int num1 = Convert.ToInt32(Console.ReadLine());
-    int num2 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine($"The sum is: {num1+num2}");
-}
+// if (userInput == "1")
+// {
+//     Console.WriteLine("Please give me two numbers");
+//     int num1 = Convert.ToInt32(Console.ReadLine());
+//     int num2 = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine($"The sum is: {num1+num2}");
+// }
 
-else if(userInput == "2")
-{
+// else if(userInput == "2")
+// {
     
-}
+// }
+using CollectionFunction;
+
+Collection collect = new Collection();
+collect.CollectionMain();
 
 
