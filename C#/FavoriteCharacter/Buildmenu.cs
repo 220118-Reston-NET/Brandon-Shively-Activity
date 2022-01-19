@@ -4,6 +4,14 @@ namespace BuildFunction
     {
         private string[] _menu = new string[5];
 
+        private string _userChoice;
+
+        public void UserChoice()
+        {
+            _userChoice = Console.ReadLine();
+            Console.WriteLine("You choose: "+_menu[Convert.ToInt32(_userChoice)-1]);
+        }
+
         public void BuildMenu()
         {
             Console.WriteLine("Please select your favorite Supernatural character");
