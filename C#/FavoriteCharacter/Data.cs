@@ -7,7 +7,7 @@ namespace TotalVotesFunction;
         public static string[] _rmenu = new string[6];
         public static int[] _rvote = new int[5]{Menu._votes[0], Menu._votes[1], Menu._votes[2], Menu._votes[3], Menu._votes[4]};
 
-            public static void TotalVotesMain()
+        public static void TotalVotesMain()
             {
                 Console.WriteLine($"{Menu._votes[0]} have selected Dean Winchester");
                 Console.WriteLine($"{Menu._votes[1]} have selected Sam Winchester");
@@ -16,7 +16,7 @@ namespace TotalVotesFunction;
                 Console.WriteLine($"{Menu._votes[4]} have selected Unlisted");
             }
 
-            public static void RemoveVote()
+        public static void RemoveVote()
             {
                 string _rcontinue = "true";
                 Array.Copy(Menu._votes, _rvote, 5);
@@ -64,7 +64,7 @@ namespace TotalVotesFunction;
                 }
             }
 
-            public static void RemoveMenu()
+        public static void RemoveMenu()
             {
                 _rmenu[0] = "Dean Winchester";
                 _rmenu[1] = "Sam Winchester";
@@ -79,4 +79,41 @@ namespace TotalVotesFunction;
                         Console.WriteLine($"[{i}]: {_rmenu[i-1]}");
                     }
             }
+    
+        public static void SearchVote()
+        {
+            Console.WriteLine("Please select who you would like to know the votes for:");
+            _rmenu[0] = "Dean Winchester";
+            _rmenu[1] = "Sam Winchester";
+            _rmenu[2] = "Castiel";
+            _rmenu[3] = "Bobby Singer";
+            _rmenu[4] = "Not Listed";
+            Console.WriteLine("");
+            for (int i = 1; i < 6; i++)  
+            {
+                Console.WriteLine($"[{i}]: {_rmenu[i-1]}");
+            }
+            string _userSearch = Console.ReadLine();
+            switch (_userSearch)
+            {
+                case "1":
+                    Console.WriteLine($"The vote for {_rmenu[0]} is now {Menu._votes[0]}");
+                    break;
+                case "2":
+                    Console.WriteLine($"The vote for {_rmenu[1]} is now {Menu._votes[1]}");
+                    break;
+                case "3":
+                    Console.WriteLine($"The vote for {_rmenu[2]} is now {Menu._votes[2]}");
+                    break;
+                case "4":
+                    Console.WriteLine($"The vote for {_rmenu[3]} is now {Menu._votes[3]}");
+                    break;
+                case "5":
+                    Console.WriteLine($"The vote for {_rmenu[4]} is now {Menu._votes[4]}");
+                    break;
+                default:
+                    Console.WriteLine("You did not pick a valid option");
+                    break; 
+            } 
+        }
     }

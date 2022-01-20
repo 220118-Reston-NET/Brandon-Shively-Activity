@@ -4,7 +4,7 @@ namespace BuildFunction
 {
     public class Menu
     {
-        private static string[] _menu = new string[8];
+        private static string[] _menu = new string[9];
         public static int[] _votes = new int[5]{0, 0, 0, 0, 0};
         private string _continue = "true";
 
@@ -32,12 +32,18 @@ namespace BuildFunction
 
                 else if (_userChoice == "7")
                 {
+                    Data.SearchVote();
+                    BuildMenu();
+                }
+
+                else if (_userChoice == "8")
+                {
                     Data.RemoveVote();
                     Array.Copy(Data._rvote, _votes, 5);
                     BuildMenu();
                 }
 
-                else if (_userChoice == "8")
+                else if (_userChoice == "9")
                 {
                     Console.WriteLine("Total Votes are:");
                     Data.TotalVotesMain();
@@ -64,10 +70,11 @@ namespace BuildFunction
             _menu[3] = "Bobby Singer";
             _menu[4] = "Not Listed";
             _menu[5] = "See Current Votes";
-            _menu[6] = "Switch to removing votes";
-            _menu[7] = "Exit Voting";
+            _menu[6] = "See Votes for a character";
+            _menu[7] = "Switch to removing votes";
+            _menu[8] = "Exit Voting";
 
-            for (int i = 1; i < 9; i++)  
+            for (int i = 1; i < 10; i++)  
             {
                 Console.WriteLine($"[{i}]: "+_menu[i-1]);
             }
