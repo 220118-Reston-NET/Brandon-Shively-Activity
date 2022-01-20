@@ -59,7 +59,6 @@ namespace TotalVotesFunction;
                             break;
                         default:
                             Console.WriteLine("You did not pick a valid option");
-                            RemoveMenu();
                             break;
                     }
                 }
