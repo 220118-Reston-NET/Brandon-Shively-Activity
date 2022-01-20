@@ -9,7 +9,7 @@ namespace BuildFunction
         public void UserChoice()
         {
             _userChoice = Console.ReadLine();
-            Console.WriteLine("You choose: "+_menu[Convert.ToInt32(_userChoice)-1]);
+            Console.WriteLine("You choose: "+_menu[Convert.ToInt32(_userChoice)-1]); //exception error can be thrown if a non int  is inputed
         }
 
         public void BuildMenu()
