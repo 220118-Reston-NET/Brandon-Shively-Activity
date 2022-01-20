@@ -2,6 +2,8 @@ using BuildFunction;
 
 namespace TotalVotesFunction;
 
+//I realized I didn't do the assignment correctly 
+
     public class Data
     {
         public static string[] _rmenu = new string[6];
