@@ -9,7 +9,15 @@ namespace BuildFunction
         public void UserChoice()
         {
             _userChoice = Console.ReadLine();
-            Console.WriteLine("You choose: "+_menu[Convert.ToInt32(_userChoice)-1]); //exception error can be thrown if a non int  is inputed
+            if (_userChoice == "1" || _userChoice =="2" || _userChoice =="3" || _userChoice =="4" || _userChoice =="5")
+            {
+                Console.WriteLine("You choose: "+_menu[Convert.ToInt32(_userChoice)-1]); //exception error can be thrown if a non int  is inputed
+            }
+
+            else
+            {
+                Console.WriteLine("You did not select a valid option");
+            }
         }
 
         public void BuildMenu()
