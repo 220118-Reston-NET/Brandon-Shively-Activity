@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace CollectionFunction
 {
 
@@ -13,23 +15,25 @@ namespace CollectionFunction
         //They store a specific datatype and have variable size
         //Syntax: <(datatype)>
 
-        //List Collection
-        //Zero based index
-        //Used to store a datatype and has variable size
-        private List<string> _strings = new List<string>();
+            //List Collection
+            //Zero based index
+            //Used to store a datatype and has variable size
+            private List<string> _strings = new List<string>();
 
-        //Hashset Collection
-        //There is no particular order to the ellements
-        //You cannot have duplicate elements
-        private HashSet<int> _numsCollection = new HashSet<int>();
+            //Hashset Collection
+            //There is no particular order to the ellements
+            //You cannot have duplicate elements
+            private HashSet<int> _numsCollection = new HashSet<int>();
 
-        //dictionary Collection
-        //Stores information through key-value pairs
-        //There is no particular order
-        private Dictionary<string,int> _directory = new Dictionary<string, int>();
+            //dictionary Collection
+            //Stores information through key-value pairs
+            //There is no particular order
+            private Dictionary<string,int> _directory = new Dictionary<string, int>();
 
         //Non-generic Collection
         //They store any datatype and have variable size
+            private ArrayList _nonGeneric = new ArrayList();
+
 
         public void CollectionMain()
         {
@@ -71,6 +75,14 @@ namespace CollectionFunction
             _directory.Add("Jonathon", -200);
 
             Console.WriteLine(_directory["Stephen"]);
+
+            Console.WriteLine("===Non Gneeric===");
+            _nonGeneric.Add("Stephen");
+            _nonGeneric.Add(5);
+            _nonGeneric.Add(true);
+            _nonGeneric.Add(10.70);
+
+            Console.WriteLine(Convert.ToInt16(_nonGeneric[1])+Convert.ToDouble(_nonGeneric[3]));
 
         }
     }

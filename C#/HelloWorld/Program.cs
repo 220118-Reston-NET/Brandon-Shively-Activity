@@ -1,5 +1,6 @@
 ﻿// // See https://aka.ms/new-console-template for more information
  using CarFunction;
+ using ConversionFunction;
 
 // Console.WriteLine("Hello, World!");
 
@@ -47,5 +48,13 @@ using CollectionFunction;
 
 Collection collect = new Collection();
 collect.CollectionMain();
+Conversion.ConversionMain();
+Conversion._num = 10;
 
+Conversion con1 =  new Conversion();
+Conversion con2 = new Conversion();
+Console.WriteLine("===Static Demo===");
+
+Console.WriteLine(con1.GiveMeNumber());
+Console.WriteLine(con2.GiveMeNumber());
 
