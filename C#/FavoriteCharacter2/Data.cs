@@ -8,15 +8,17 @@ public class InitialMenu
     private static int i = 0;
     static int _userselection;
 
-    public static void CurrentMenu()
+    public void CurrentMenu()
     {
+        i = 0;
         foreach (string name in _characters)
         {
             Console.WriteLine($"{i+1}. {name}");
+            i++;
         };
     }
 
-    public static void CurrentVote()
+    public void CurrentVote()
     {
         foreach (int vote in _vote)
         {
@@ -25,12 +27,37 @@ public class InitialMenu
         }
     }
 
-    public static void UserSelection()
+    public void UserSelection()
     {
+        _userselection = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("You have selected: "+_characters[_userselection -1]);
+        if (_userselection == _characters.Count -4)
+        {
+            CurrentVote();
+        }
+        else if (_userselection == _characters.Count -3)
+        {
+            SearchForCharacter();
+        }
+        else if (_userselection == _characters.Count -2)
+        {
+            AddCharacter();
+        }
+        else if (_userselection == _characters.Count -1)
+        {
+            RemoveCharacter();
+        }
+        else if (_userselection == _characters.Count)
+        {
+            AddCharacter();
+        }
+        else
+        {
+            Console.WriteLine("Please select a valid option");
+        }
     }
 
-    public static void AddCharacter()
+    public void AddCharacter()
     {
         string? _userAdd;
         string? _userCharacter;
@@ -67,7 +94,7 @@ public class InitialMenu
         }
     }
 
-    public static void RemoveCharacter()
+    public void RemoveCharacter()
     {
         Console.WriteLine("Please type in the character you would like deleted");
         CurrentMenu();
@@ -77,7 +104,7 @@ public class InitialMenu
         Console.WriteLine("The character has been removed from the list.");
     }
 
-    public static void SearchForCharacter()
+    public void SearchForCharacter()
     {
         string _userName;
         Console.WriteLine("Type the name of the character you would like to search for.");
